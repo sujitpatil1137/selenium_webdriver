@@ -1,9 +1,12 @@
 package ActionsClass;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.*;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MouseHover {
 	
@@ -11,17 +14,15 @@ public static void main(String[] args) throws InterruptedException {
 	
 		
 		System.setProperty("webdriver.chrome.driver", "C://Users//Admin//Downloads//chromedriver_win32//chromedriver.exe");		
-
-		ChromeDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");		
 		driver.manage().window().maximize();	
 		Thread.sleep(3000);
 				
 		WebElement email = driver.findElement(By.xpath("//input[@name='username']"));
-		email.sendKeys("Admin");
-		
+		email.sendKeys("Admin");		
 		WebElement password = driver.findElement(By.name("password"));	
 		password.sendKeys("admin123");
 		

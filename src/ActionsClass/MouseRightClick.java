@@ -1,10 +1,13 @@
 package ActionsClass;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MouseRightClick {
 	
@@ -12,7 +15,8 @@ public class MouseRightClick {
 	
 		
 		System.setProperty("webdriver.chrome.driver", "C://Users//Admin//Downloads//chromedriver_win32//chromedriver.exe");		
-		ChromeDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://swisnl.github.io/jQuery-contextMenu/demo.html");
 		Thread.sleep(2000);

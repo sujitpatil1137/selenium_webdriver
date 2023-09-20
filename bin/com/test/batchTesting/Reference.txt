@@ -1,0 +1,45 @@
+
+Test Suite:
+------------
+
+1. SanityTestSuite.xml
+		
+	Test Cases:
+		1. LoginTest.java
+				Method:
+					1. loginByEmail()
+					2. loginByFacebook()
+					3. loginByTwitter()
+					
+		2. SignUpTest.java
+				Method:
+					1. signupByEmail()
+					2. signupByFacebook()
+					3. signupByTwitter()
+
+
+2. FunctionalTestSuite.xml
+
+	Test Cases:
+		1. PaymentTest.java				
+				Method:			
+					1. paymentinDollar()
+					2. paymentinRupees()
+					
+		2. PaymentReturn.java
+				Method:
+					1. paymentReturnByBank()
+					
+					
+
+MasterTestSuite:
+----------------
+
+MasterTestSuite.xml
+			1. SanityTestSuite.xml
+			2. FunctionalTestSuite.xml
+			
+
+
+
+		

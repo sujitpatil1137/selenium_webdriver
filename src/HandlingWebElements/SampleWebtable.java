@@ -3,21 +3,23 @@ package HandlingWebElements;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SampleWebtable {
 	
 	public static void main(String[] args) throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", "C://Users//Admin//Downloads//chromedriver_win32//chromedriver.exe");		
-
-		ChromeDriver driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();		
 		driver.get("https://www.w3schools.com/html/html_tables.asp");
 		
-		// Handling Webtable rows:
-		
+		// Handling Webtable rows:	
 		List<WebElement> rows	= driver.findElements(By.xpath("//table[@id=\"customers\"]/tbody/tr"));		
 		int rowCount = rows.size();
 		System.out.println("Total number of rows in the table are : " +rowCount);
@@ -37,10 +39,8 @@ public class SampleWebtable {
 		}
 		
 		System.out.println("********************");
-		
-		
-		// Handling Webtable coloums:
-		
+				
+		// Handling Webtable coloums:		
 		List<WebElement> cols = driver.findElements(By.xpath("//*[@id=\"customers\"]/tbody/tr[1]/th"));
 		int colsCount = cols.size();
 		System.out.println("Total number of coloums in the table are : " +colsCount);

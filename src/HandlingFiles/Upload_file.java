@@ -20,7 +20,7 @@ public static void main(String[] args) throws IOException, InterruptedException 
 		
 		driver.get("https://ps.uci.edu/~franklin/doc/file_upload.html");
 		
-		driver.findElement(By.xpath("//input[@name='userfile']")).sendKeys("C:\\Users\\Admin\\Downloads\\chuvash.docx");
+		driver.findElement(By.xpath("//input[@name='userfile']")).sendKeys("C:\\Users\\Admin\\Downloads\\HP Wolf Security.docx");
 
 }
 
